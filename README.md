@@ -1,4 +1,4 @@
-# Hello world docker action
+# PlatformIO-Publish
 
 This action deploys a library to the PlatformIO registry.
 
