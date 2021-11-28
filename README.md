@@ -19,7 +19,7 @@ N/A
 ## Example usage
 
 ```yaml
-uses: bojit/platformio-publish@master
+uses: bojit/platformio-publish@main
 with:
   token: ${{ secrets.PLATFORMIO_TOKEN }}
 ```
