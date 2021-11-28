@@ -1,23 +1,25 @@
 # Hello world docker action
 
-This action prints "Hello World" to the log or "Hello" + the name of a person to greet. To learn how this action was built, see "[Creating a Docker container action](https://help.github.com/en/articles/creating-a-docker-container-action)" in the GitHub Help documentation.
+This action deploys a library to the PlatformIO registry.
+
+To use this environment you need to generate a [Personal Authentication Token](https://docs.platformio.org/en/latest/core/userguide/account/cmd_token.html) for your PlatformIO account
 
 ## Inputs
 
-### `who-to-greet`
+### `token`
 
-**Required** The name of the person to greet. Default `"World"`.
+**Required** PlatformIO Personal Authentication Token: Typically add this as a secret to your GitHub repository:
+
+![Github_Secret](./img/secret.png)
 
 ## Outputs
 
-### `time`
-
-The time we greeted you.
+N/A
 
 ## Example usage
 
 ```yaml
-uses: actions/hello-world-docker-action@master
+uses: bojit/platformio-publish@master
 with:
-  who-to-greet: 'Mona the Octocat'
+  token: ${{ secrets.PLATFORMIO_TOKEN }}
 ```

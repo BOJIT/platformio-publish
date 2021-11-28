@@ -1,15 +1,11 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'PlatformIO Publish'
+description: 'Deploy library to the PlatformIO Registry'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  token:  # id of input
+    description: 'PlatformIO Personal Authentication Token'
     required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.token }}
